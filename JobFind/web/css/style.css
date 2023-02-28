@@ -1,0 +1,135 @@
+body {
+    font-family: 'Rubik Distressed', cursive;
+    font-family: 'Rubik Microbe', cursive;
+    font-family: 'Sono', sans-serif;
+}
+
+div .img1 {
+    width: 150px;
+    filter: drop-shadow(0 10px 5px black);
+}
+
+.rang {
+    background-color: rgb(202, 237, 202);
+}
+
+.round {
+    border-radius: 25% 10%;
+}
+
+.text {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.box {
+    display: flex;
+}
+
+.box .inner {
+    width: 250px;
+    height: 80px;
+    line-height: 100px;
+    font-size: 3em;
+    font-family: sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.box .inner:first-child {
+    background-color: indianred;
+    color: darkred;
+    transform-origin: right;
+    transform: perspective(100px) rotateY(-15deg);
+}
+
+.box .inner:last-child {
+    background-color: lightcoral;
+    color: antiquewhite;
+    transform-origin: left;
+    transform: perspective(100px) rotateY(15deg);
+}
+
+.box .inner span {
+    position: absolute;
+    animation: marquee 5s linear infinite;
+}
+
+.box .inner:first-child span {
+    animation-delay: 2.5s;
+    left: -100%;
+}
+
+@keyframes marquee {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+.search
+{
+    border: 2px;
+    border-color: black;
+
+    width: 450px;
+}
+.co
+{
+    border-color: black;
+    border-style: dashed;
+}
+
+.rectangle-input {
+
+    background-color: var(--color-white);
+
+
+
+    border-radius: 17px;
+    width: 264.31px;
+    height: 35.17px;
+    transform: rotate(0.16deg);
+    transform-origin: 0 0;
+}
+.iconsaxlinearsearchstatus {
+    position: absolute;
+    top: 10.32px;
+    left: 233.07px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.frame-div {
+    position: relative;
+    width: 100%;
+    height: 44.92px;
+}
